@@ -1,0 +1,218 @@
+:root {
+  --primary: #f7f7f7;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --blueCol: rgba(70, 70, 236, 0.918);
+  --redCol: rgba(255, 46, 46, 0.918);
+  --greenCol: rgba(34, 172, 34, 0.918);
+}
+
+/* ***************
+   Global Styles
+******************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* place-items: center; */
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/* ***************
+   Typography 
+******************/
+h1,
+h2,
+h3,
+h4{
+    font-weight: 600;
+}
+
+/* ***************
+   Layouts
+******************/
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.history {
+  background-color: var(--white);
+  margin: 0;
+}
+
+.list {
+  list-style-type: none;
+  margin-top: 30px;
+  justify-content: space-between;
+  /* width: 1200px; */
+}
+
+
+
+/* ***************
+   Components
+******************/
+.btnStart,
+.btnStop,
+.btnDelete,
+.btnEdit {
+    opacity: .9;
+
+}
+.btnStart:hover{
+    opacity: 1;
+
+}
+.btnStop:hover{
+    opacity: 1;
+
+}
+.btnDelete:hover{
+    opacity: 1;
+
+}
+.btnEdit:hover{
+    opacity: 1;
+
+}
+
+
+.btnStop:disabled,
+.btnStop[disabled]{
+  /* border: 1px solid #999999; */
+  background-color: #cccccc;
+  color: #666666;
+}
+
+/* inputs and labels*/
+input[type="text"],
+input[type="number"] {
+  -moz-appearance: textfield;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+label {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+.list li {
+  /* border-bottom: 1px solid rgba(12, 24, 36, .3); */
+  box-shadow: var(--box-shadow);
+  padding: 5px 30px;
+  margin: 5px;
+  position: relative;
+}
+
+.buttons{
+    display: inline-block;
+    margin-top: 15px;
+}
+.btnStart {
+  cursor: pointer;
+  padding: 5px 20px;
+  background-color: var(--greenCol);
+  color: white;
+ }
+ 
+.btnStop {
+  cursor: pointer;
+  padding: 5px 20px;
+  background-color: var(--redCol);
+  color: white;
+}
+
+.btnDelete {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: var(--redCol);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+.btnEdit {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: var(--blueCol);
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.count {
+  padding: 5px 20px;
+  font-size: 20px;
+  margin: 50px 20px;
+  background-color: yellow;
+}
+
+.orangeBorder {
+  /* border: 5px solid rgb(32, 17, 167); */
+  background-color: orangered;
+}
+
+/* media queries */
+
+@media (min-width: 440px){
+ 
+    .container {
+        
+        width: 85vw;
+      }
+     
+    }
+     
+    @media (min-width: 768px){
+        .container {
+        
+            width: 85vw;
+          }
+    
+     
+    }
+     
+    @media (min-width: 1024px){
+        .container {
+        
+            width: 75vw;
+          }
+    
+     
+    }
+     
+    @media (min-width: 1200px){
+     
+        .container {
+        
+            width: 70vw;
+          }
+     
+    }

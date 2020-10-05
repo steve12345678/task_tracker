@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="fontstyles.css" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <h1>Timer 2020</h1>
+        <div class="timeContainer">
+          <div class="count" id="count">0</div>
+        </div>
+        <p>
+          total 1hr 42m 4 sessions average 25 minutes
+          <span><a href="/advanced">...more</a> </span>
+        </p>
+        <form class="form" id="form">
+          <label for="input">New Session</label>
+          <input type="text" class="input" id="input" />
+          <label for="location">Location</label>
+          <input type="text" class="input" id="location" />
+          <div class="buttons">
+            <button class="btnStart" id="start">Start</button>
+            <button class="btnStop" id="stop">Stop</button>
+          </div>
+        </form>
+
+        <!-- start stop delete etc -->
+      </div>
+      <div class="history">
+        <!-- data from previous sessions -->
+        <!-- date, duration, location, message -->
+        <ul class="list" id="list"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
